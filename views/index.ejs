@@ -276,7 +276,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
 
   try {
     // Send review to the server
-    const response = await fetch("http://localhost:5000/reviews", {
+    const response = await fetch("https://great-moverss.onrender.com/reviews", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -314,7 +314,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
 // Function to load the latest review from the database on page load
 async function loadReviews() {
   try {
-    const response = await fetch("http://localhost:5000/reviews");
+    const response = await fetch("https://great-moverss.onrender.com/reviews");
     const reviews = await response.json();
 
     if (reviews.length > 0) {
